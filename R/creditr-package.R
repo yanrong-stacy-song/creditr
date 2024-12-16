@@ -17,9 +17,8 @@
 #' relevant interest rates from online sources. Thanks to ISDA Standard Model's 
 #' Open Source license, we are able to create this package for R users. You can 
 #' find the Open Source licence of ISDA Standard Model at 
-#' "http://www.cdsmodel.com/cdsmodel/cds-disclaimer.html?"
+#' "https://www.cdsmodel.com/cdsmodel/cds-disclaimer.html"
 #' 
-"_PACKAGE"
 #' @name creditr
 #'   
 #' @useDynLib creditr
@@ -37,4 +36,4 @@
 #' @import RCurl
 #' @import XML
 #' @import xts
-NULL
+"_PACKAGE"

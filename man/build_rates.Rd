@@ -54,8 +54,8 @@ build_rates(start.date = as.Date("2004-01-01"),
             end.date = as.Date("2014-08-23"))}
 }
 \references{
-\url{http://www.markit.com/} 
-  \url{http://research.stlouisfed.org/fred2/categories/33003/downloaddata}
+\url{https://www.spglobal.com/en} 
+  \url{https://fred.stlouisfed.org/docs/api/fred/}
 }
 \seealso{
 \link{download_markit} \link{download_FRED} \link{rates}

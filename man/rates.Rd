@@ -14,8 +14,8 @@ A data frame with 194378 observations on the following 4 variables.
   = a numeric vector. The LIBOR rate. }
 }
 \source{
-\url{https://www.markit.com/} 
-  \url{http://research.stlouisfed.org/fred2/}
+\url{https://www.spglobal.com/en} 
+  \url{https://fred.stlouisfed.org/}
 }
 \description{
 This data frame is created by \code{build_rates} in \code{creditr} package to
@@ -25,7 +25,7 @@ weekends are available as well as business days.
 }
 \details{
 The source of the interest rates in \code{rates.RData} is from 
-  \url{https://www.markit.com/} and 
+  \url{https://www.spglobal.com/en} and 
   \url{http://research.stlouisfed.org/fred2/}. When a user is calculating CDS
   using the \code{CDS} package, the package calls \code{get_rates} to get the
   needed interest rates; \code{get_rates} then calls the \code{rates.RData} 
@@ -95,6 +95,6 @@ rates[rates$currency == "USD" & rates$date == "2005-10-01",]
 \code{\link{download_FRED}} \code{\link{download_markit}}
   \code{\link{build_rates}}
 }
-\keyword{datasets,}
+\keyword{datasets}
 \keyword{interest}
 \keyword{rates}

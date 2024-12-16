@@ -56,7 +56,7 @@ get_raw_markit <- function(date, currency){
                               verbose = FALSE,
                               ssl.verifypeer = FALSE),
                   error = function(e) {
-                    return("Rates data not available at markit.com")
+                    return("Rates data not available at https://www.spglobal.com/en")
                   })
     close(f)
     if (inherits(a, "character")){

@@ -33,6 +33,6 @@ add_conventions(x)
 }
 \references{
 \url{
-http://www.cdsmodel.com/cdsmodel/assets/cds-model/docs/c-code%20Key%20Functions-v1.pdf
+https://www.cdsmodel.com/cdsmodel/assets/cds-model/docs/c-code%20Key%20Functions-v1.pdf
 }
 }
