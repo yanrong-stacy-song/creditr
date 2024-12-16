@@ -163,26 +163,17 @@ char* JpmcdsFormatDate(TDate date) /* (I) */
         snprintf(&format[ibuf][0], MAX_STR_LEN, "%s", "bad date");
     else
     {
-        if (mdy.month < 10 && mdy.day < 10)
-        {
-            snprintf(&format[ibuf][0], MAX_STR_LEN, "%04d%02d%02d",
-                     (int)mdy.year, (int)mdy.month, (int)mdy.day );
-        }
-        else if (mdy.month < 10 && mdy.day >= 10)
-        {
-            snprintf(&format[ibuf][0], MAX_STR_LEN, "%04d%02d%02d",
-                     (int)mdy.year, (int)mdy.month, (int)mdy.day );
-        }
-        else if (mdy.month >= 10 && mdy.day < 10)
-        {
-            snprintf(&format[ibuf][0], MAX_STR_LEN, "%04d%02d%02d",
-                     (int)mdy.year, (int)mdy.month, (int)mdy.day );
-        }
-        else   /* month && day >= 10 */
-        {
-            snprintf(&format[ibuf][0], MAX_STR_LEN, "%04d%02d%02d",
-                     (int)mdy.year, (int)mdy.month, (int)mdy.day );
-        }
+      // Validate ranges to prevent warnings or bad formatting
+      if (mdy.year < 0 || mdy.year > 9999 || mdy.month < 1 || mdy.month > 12 || mdy.day < 1 || mdy.day > 31)
+      {
+        snprintf(&format[ibuf][0], MAX_STR_LEN, "%s", "bad date");
+      }
+      else
+      {
+        // Single snprintf call for formatting the date
+        snprintf(&format[ibuf][0], MAX_STR_LEN, "%04d%02d%02d",
+                 (int)mdy.year, (int)mdy.month, (int)mdy.day);
+      }
     }
     return &format[ibuf][0];
 }
