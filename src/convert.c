@@ -252,7 +252,7 @@ char* JpmcdsFormatDateInterval(TDateInterval *interval) /* (I) */
             numPeriods = interval->prd;
     }
 
-    snprintf(&format[ibuf][0], 128, "%d%c", numPeriods, periodType);
+    snprintf(&format[ibuf][0], MAX_STR_LEN, "%d%c", numPeriods, periodType);
     return &format[ibuf][0];
 }
 
