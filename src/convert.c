@@ -160,27 +160,27 @@ char* JpmcdsFormatDate(TDate date) /* (I) */
     ibuf = (ibuf+1)&(MAX_AT_ONCE-1); /* Toggle buffers */
 
     if (JpmcdsDateToMDY(date, &mdy) == FAILURE)
-        snprintf(&format[ibuf][0], 128, "%s", "bad date");
+        snprintf(&format[ibuf][0], MAX_STR_LEN, "%s", "bad date");
     else
     {
         if (mdy.month < 10 && mdy.day < 10)
         {
-            snprintf(&format[ibuf][0], 128, "%ld0%ld0%ld",
+            snprintf(&format[ibuf][0], MAX_STR_LEN, "%ld0%ld0%ld",
                     mdy.year, mdy.month, mdy.day );
         }
         else if (mdy.month < 10 && mdy.day >= 10)
         {
-            snprintf(&format[ibuf][0], 128, "%ld0%ld%ld",
+            snprintf(&format[ibuf][0], MAX_STR_LEN, "%ld0%ld%ld",
                     mdy.year, mdy.month, mdy.day );
         }
         else if (mdy.month >= 10 && mdy.day < 10)
         {
-            snprintf(&format[ibuf][0], 128, "%ld%ld0%ld",
+            snprintf(&format[ibuf][0], MAX_STR_LEN, "%ld%ld0%ld",
                     mdy.year, mdy.month, mdy.day );
         }
         else   /* month && day >= 10 */
         {
-            snprintf(&format[ibuf][0], 128, "%ld%ld%ld",
+            snprintf(&format[ibuf][0], MAX_STR_LEN, "%ld%ld%ld",
                     mdy.year, mdy.month, mdy.day );
         }
     }
