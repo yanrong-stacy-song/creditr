@@ -165,8 +165,8 @@ char* JpmcdsFormatDate(TDate date) /* (I) */
     {
         if (mdy.month < 10 && mdy.day < 10)
         {
-            snprintf(&format[ibuf][0], MAX_STR_LEN, "%04ld%02ld%02ld",
-                    mdy.year, mdy.month, mdy.day );
+            snprintf(&format[ibuf][0], MAX_STR_LEN, "%04d%02d%02d",
+                     (int)mdy.year, (int)mdy.month, (int)mdy.day );
         }
         else if (mdy.month < 10 && mdy.day >= 10)
         {
