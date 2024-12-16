@@ -40,6 +40,8 @@ Class definition for the \code{CDS-Class}
 \item{\code{pd}}{is the approximate the default probability at time t given the
 \code{spread}.}
 
+\item{\code{price}}{is the price}
+
 \item{\code{upfront}}{is quoted in the currency amount. Since a standard contract is
 traded with fixed coupons, upfront payment is introduced to reconcile the
 difference in contract value due to the difference between the fixed coupon

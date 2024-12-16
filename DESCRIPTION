@@ -1,21 +1,42 @@
 Package: creditr
-Version: 0.6.1.9002
-Date: 2015-10-20
+Version: 0.7.1.9002
+Date: 2024-12-15
 Title: Credit Default Swaps in R
-Author: c(person("Heidi", "Chen", role = c("aut"),
-                email = "s.heidi.chen@gmail.com"),
-                person("Yuanchu", "Dang", role = c("aut"),
-                email = "yuanchu.dang@gmail.com"),
-                person("David", "Kane", role = c("aut"),
-                email = "dave.kane@gmail.com"),
-                person("Yang", "Lu", role = c("aut", "cre"),
-                email = "yang.lu2014@gmail.com"),
-                person("Skylar", "Smith", role = c("aut"),
-                email = "sws2@williams.edu"),
-                person("Kanishka", "Malik", role = c("aut"),
-                email = "kanishkamalik@gmail.com"),
-                person("Miller Zijie", "Zhu", role = c("aut"),
-                email = "zijie.zhu@williams.com"))
+Authors@R: c(
+      person(given = c("Yanrong", "Stacy"), 
+             family = "Song", 
+             role = c("aut", "cre"), 
+             email = "yrsong129@gmail.com", 
+             comment = "Corresponding author"),
+      person(given = c("Zijie", "Miller"), 
+             family = "Zhu", 
+             role = "aut", 
+             email = "zijie.miller.zhu@gmail.com"),
+      person(given = "David", 
+             family = "Kane", 
+             role = "aut", 
+             email = "dave.kane@gmail.com"),
+      person(given = "Heidi", 
+             family = "Chen", 
+             role = "aut", 
+             email = "s.heidi.chen@gmail.com"),
+      person(given = "Yuanchu", 
+             family = "Dang", 
+             role = "aut", 
+             email = "yuanchu.dang@gmail.com"),
+      person(given = "Yang", 
+             family = "Lu", 
+             role = "aut", 
+             email = "yang.lu2014@gmail.com"),
+      person(given = "Kanishka", 
+             family = "Malik", 
+             role = "aut", 
+             email = "kanishkamalik@gmail.com"),
+      person(given = "Skylar", 
+             family = "Smith", 
+             role = "aut", 
+             email = "sws2@williams.edu")
+  )
 Depends: R (>= 3.1.0)               
 Imports: utils,
              quantmod,
@@ -28,9 +49,9 @@ Imports: utils,
              xts
 LinkingTo: Rcpp
 Suggests: testthat
-Maintainer: David Kane <dave.kane@gmail.com>
+Maintainer: Yanrong Stacy Song <yrsong129@gmail.com>
 License: file LICENSE
-URL: https://github.com/davidkane9/creditr
+URL: https://github.com/yanrong-stacy-song/creditr
 Description: Provides tools for pricing credit default swaps using
              C code from the International Swaps and Derivatives
              Association (ISDA) CDS Standard Model. See

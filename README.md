@@ -1,13 +1,19 @@
 Authors
 --------------------------------------------------------
+Yanrong Stacy Song
+yrsong129 at gmail.com
+
+Zijie Miller Zhu
+zijie.miller.zhu at gmail.com
+
+David Kane
+dave.kane at gmail.com
+
 Heidi Chen 
 s.heidi.chen at gmail.com
 
 Yuanchu Dang
 yuanchu.dang at williams.edu
-
-David Kane
-dave.kane at gmail.com
 
 Yang Lu 
 yang.lu2014 at gmail.com
@@ -18,8 +24,6 @@ kanishkamalik at gmail.com
 Skylar Smith
 skylar.smith at williams.edu
 
-Zijie Zhu
-zijie.zhu at williams.edu
 
 About
 --------------------------------------------------------

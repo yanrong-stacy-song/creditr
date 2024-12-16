@@ -48,7 +48,7 @@
   Yuanchu Dang\\Columbia University \And
   Yang Lu\\Williams College \And
   Kanishka Malik\\UCLA \And
-  Skylar Smith\\MIT Sloan
+  Skylar Smith\\Wililams College
 }
 
 \title{Credit Default Swaps with R}
@@ -77,7 +77,7 @@
 %% The address of (at least) one author should be given
 %% in the following format:
 
-\Address{Yanrong Stacy Song\\
+\Address{Yanrong Song\\
 Columbia University\\   
 Financial Engineering\\
 116th and Broadway\\
@@ -86,7 +86,7 @@ United States\\
 \email{yrsong129@gmail.com}
 }
 
-\Address{Zijie Miller Zhu\\
+\Address{Zijie Zhu\\
 Columbia University\\   
 Computer Science\\
 116th and Broadway\\

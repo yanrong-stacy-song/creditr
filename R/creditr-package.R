@@ -19,8 +19,8 @@
 #' find the Open Source licence of ISDA Standard Model at 
 #' "http://www.cdsmodel.com/cdsmodel/cds-disclaimer.html?"
 #' 
+"_PACKAGE"
 #' @name creditr
-#' @docType package
 #'   
 #' @useDynLib creditr
 #'   

@@ -160,27 +160,27 @@ char* JpmcdsFormatDate(TDate date) /* (I) */
     ibuf = (ibuf+1)&(MAX_AT_ONCE-1); /* Toggle buffers */
 
     if (JpmcdsDateToMDY(date, &mdy) == FAILURE)
-        snprintf(&format[ibuf][0], sizeof(&format[ibuf][0]), "%s", "bad date");
+        snprintf(&format[ibuf][0], 128, "%s", "bad date");
     else
     {
         if (mdy.month < 10 && mdy.day < 10)
         {
-            snprintf(&format[ibuf][0], sizeof(&format[ibuf][0]), "%ld0%ld0%ld",
+            snprintf(&format[ibuf][0], 128, "%ld0%ld0%ld",
                     mdy.year, mdy.month, mdy.day );
         }
         else if (mdy.month < 10 && mdy.day >= 10)
         {
-            snprintf(&format[ibuf][0], sizeof(&format[ibuf][0]), "%ld0%ld%ld",
+            snprintf(&format[ibuf][0], 128, "%ld0%ld%ld",
                     mdy.year, mdy.month, mdy.day );
         }
         else if (mdy.month >= 10 && mdy.day < 10)
         {
-            snprintf(&format[ibuf][0], sizeof(&format[ibuf][0]), "%ld%ld0%ld",
+            snprintf(&format[ibuf][0], 128, "%ld%ld0%ld",
                     mdy.year, mdy.month, mdy.day );
         }
         else   /* month && day >= 10 */
         {
-            snprintf(&format[ibuf][0], sizeof(&format[ibuf][0]), "%ld%ld%ld",
+            snprintf(&format[ibuf][0], 128, "%ld%ld%ld",
                     mdy.year, mdy.month, mdy.day );
         }
     }
@@ -252,7 +252,7 @@ char* JpmcdsFormatDateInterval(TDateInterval *interval) /* (I) */
             numPeriods = interval->prd;
     }
 
-    snprintf(&format[ibuf][0], sizeof(&format[ibuf][0]), "%d%c", numPeriods, periodType);
+    snprintf(&format[ibuf][0], 128, "%d%c", numPeriods, periodType);
     return &format[ibuf][0];
 }
 
