@@ -165,22 +165,22 @@ char* JpmcdsFormatDate(TDate date) /* (I) */
     {
         if (mdy.month < 10 && mdy.day < 10)
         {
-            snprintf(&format[ibuf][0], MAX_STR_LEN, "%ld0%ld0%ld",
+            snprintf(&format[ibuf][0], MAX_STR_LEN, "%04ld%02ld%02ld",
                     mdy.year, mdy.month, mdy.day );
         }
         else if (mdy.month < 10 && mdy.day >= 10)
         {
-            snprintf(&format[ibuf][0], MAX_STR_LEN, "%ld0%ld%ld",
+            snprintf(&format[ibuf][0], MAX_STR_LEN, "%04ld%02ld%02ld",
                     mdy.year, mdy.month, mdy.day );
         }
         else if (mdy.month >= 10 && mdy.day < 10)
         {
-            snprintf(&format[ibuf][0], MAX_STR_LEN, "%ld%ld0%ld",
+            snprintf(&format[ibuf][0], MAX_STR_LEN, "%04ld%02ld%02ld",
                     mdy.year, mdy.month, mdy.day );
         }
         else   /* month && day >= 10 */
         {
-            snprintf(&format[ibuf][0], MAX_STR_LEN, "%ld%ld%ld",
+            snprintf(&format[ibuf][0], MAX_STR_LEN, "%04ld%02ld%02ld",
                     mdy.year, mdy.month, mdy.day );
         }
     }
