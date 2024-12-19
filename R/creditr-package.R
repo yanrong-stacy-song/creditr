@@ -1,6 +1,6 @@
 #' The creditr package.
 #' 
-#' \code{creditr} package provides useful tools for pricing credit default swaps
+#' \code{creditr} package prices credit default swaps
 #' (CDS). It enables CDS class object which has slots as name, contract, RED, 
 #' date, spread, maturity, teno, coupon, recovery, currency, notional, 
 #' principal, accrual, pd, price, upfront, spread.DV01, IR.DV01 and rec.risk.01,

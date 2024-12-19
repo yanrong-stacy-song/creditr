@@ -1,9 +1,9 @@
 Authors
 --------------------------------------------------------
-Yanrong Stacy Song
+Yanrong Song
 yrsong129 at gmail.com
 
-Zijie Miller Zhu
+Zijie Zhu
 zijie.miller.zhu at gmail.com
 
 David Kane

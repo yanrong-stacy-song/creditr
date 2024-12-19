@@ -1,14 +1,13 @@
 Package: creditr
-Version: 0.7.1.9002
+Version: 0.6.2
 Date: 2024-12-15
-Title: Credit Default Swaps in R
+Title: Credit Default Swaps
 Authors@R: c(
-      person(given = c("Yanrong", "Stacy"), 
+      person(given = "Yanrong", 
              family = "Song", 
              role = c("aut", "cre"), 
-             email = "yrsong129@gmail.com", 
-             comment = "Corresponding author"),
-      person(given = c("Zijie", "Miller"), 
+             email = "yrsong129@gmail.com"),
+      person(given = "Zijie", 
              family = "Zhu", 
              role = "aut", 
              email = "zijie.miller.zhu@gmail.com"),
@@ -35,7 +34,10 @@ Authors@R: c(
       person(given = "Skylar", 
              family = "Smith", 
              role = "aut", 
-             email = "sws2@williams.edu")
+             email = "sws2@williams.edu"),
+      person(given = "International Swaps and Derivatives Association", 
+             role = "cph", 
+             comment = "Copyright holder of the free CDS standard model code used in this package")
   )
 Depends: R (>= 3.1.0)               
 Imports: utils,
@@ -49,16 +51,15 @@ Imports: utils,
              xts
 LinkingTo: Rcpp
 Suggests: testthat
-Maintainer: Yanrong Stacy Song <yrsong129@gmail.com>
 License: file LICENSE
 URL: https://github.com/yanrong-stacy-song/creditr
-Description: Provides tools for pricing credit default swaps using
-             C code from the International Swaps and Derivatives
-             Association (ISDA) CDS Standard Model. See
+Description: Price credit default swaps using
+             'C' code from the International Swaps and Derivatives
+             Association CDS Standard Model. See
              <https://www.cdsmodel.com/cdsmodel/documentation.html>
              for more information about the model and 
              <https://www.cdsmodel.com/cdsmodel/cds-disclaimer.html>
-             for license details for the C code.
+             for license details for the 'C' code.
 LazyData: true
 Repository: CRAN
 RoxygenNote: 7.3.2

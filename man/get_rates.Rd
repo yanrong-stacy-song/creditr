@@ -25,7 +25,5 @@ with the date conventions for that specific currency. The day input should be
 a weekday. If not, go to the most recent previous weekday.
 }
 \examples{
-\dontrun{
 get_rates(as.Date("2014-05-07"), currency = "USD")
-}
 }

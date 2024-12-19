@@ -14,7 +14,7 @@
 #'   = a numeric vector. The LIBOR rate. }
 #' @details The source of the interest rates in \code{rates.RData} is from 
 #'   \url{https://www.spglobal.com/en} and 
-#'   \url{http://research.stlouisfed.org/fred2/}. When a user is calculating CDS
+#'   \url{https://fred.stlouisfed.org/}. When a user is calculating CDS
 #'   using the \code{CDS} package, the package calls \code{get_rates} to get the
 #'   needed interest rates; \code{get_rates} then calls the \code{rates.RData} 
 #'   for these interest rates. If a date is unavailable in \code{rates.RData}, 

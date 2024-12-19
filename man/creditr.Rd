@@ -6,7 +6,7 @@
 \alias{creditr}
 \title{The creditr package.}
 \description{
-\code{creditr} package provides useful tools for pricing credit default swaps
+\code{creditr} package prices credit default swaps
 (CDS). It enables CDS class object which has slots as name, contract, RED, 
 date, spread, maturity, teno, coupon, recovery, currency, notional, 
 principal, accrual, pd, price, upfront, spread.DV01, IR.DV01 and rec.risk.01,
@@ -33,17 +33,22 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Yanrong Stacy Song \email{yrsong129@gmail.com} (Corresponding author)
+\strong{Maintainer}: Yanrong Song \email{yrsong129@gmail.com}
 
 Authors:
 \itemize{
-  \item Zijie Miller Zhu \email{zijie.miller.zhu@gmail.com}
+  \item Zijie Zhu \email{zijie.miller.zhu@gmail.com}
   \item David Kane \email{dave.kane@gmail.com}
   \item Heidi Chen \email{s.heidi.chen@gmail.com}
   \item Yuanchu Dang \email{yuanchu.dang@gmail.com}
   \item Yang Lu \email{yang.lu2014@gmail.com}
   \item Kanishka Malik \email{kanishkamalik@gmail.com}
   \item Skylar Smith \email{sws2@williams.edu}
+}
+
+Other contributors:
+\itemize{
+  \item International Swaps and Derivatives Association (Copyright holder of the free CDS standard model code used in this package) [copyright holder]
 }
 
 }
