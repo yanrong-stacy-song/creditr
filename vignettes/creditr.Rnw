@@ -35,9 +35,6 @@
 %% - \Plainauthor{} without affiliations
 %% - Separate authors by \And or \AND (in \author) or by comma (in \Plainauthor).
 %% - \AND starts a new line, \And does not.
-\author{Achim Zeileis~\orcidlink{0000-0003-0918-3766}\\Universit\"at Innsbruck
-   \And Second Author\\Plus Affiliation}
-\Plainauthor{Achim Zeileis, Second Author}
 
 %% almost as usual
 \author{
@@ -47,9 +44,10 @@
   Heidi Chen\\Harvard University \AND
   Yuanchu Dang\\Columbia University \And
   Yang Lu\\Williams College \And
-  Kanishka Malik\\UCLA \And
+  Kanishka Malik\\Williams College \And
   Skylar Smith\\Wililams College
 }
+\Plainauthor{Yanrong Song, Zijie Zhu, David Kane, Heidi Chen, Yuanchu Dang, Yang Lu, Kanishka Malik, Skylar Smith}
 
 \title{Credit Default Swaps with R}
 
@@ -77,15 +75,6 @@
 %% The address of (at least) one author should be given
 %% in the following format:
 
-\Address{Yanrong Song\\
-Columbia University\\   
-Financial Engineering\\
-116th and Broadway\\
-New York, NY 10027\\
-United States\\
-\email{yrsong129@gmail.com}
-}
-
 \Address{Zijie Zhu\\
 Columbia University\\   
 Computer Science\\
@@ -102,6 +91,16 @@ IQSS\\
 Cambridge, MA 02138\\
 United States\\
 \email{dave.kane@gmail.com}
+}
+
+
+\Address{Yanrong Song\\
+Columbia University\\   
+Financial Engineering\\
+116th and Broadway\\
+New York, NY 10027\\
+United States\\
+\email{yrsong129@gmail.com}
 }
 
 %% It is also possible to add a telephone and fax number
