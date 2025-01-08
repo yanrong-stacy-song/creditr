@@ -1,4 +1,4 @@
-\documentclass{jss}
+\documentclass[nojss]{jss}
 \linespread{1.5}
 \usepackage[round]{natbib}
 \usepackage{amssymb, amsmath}
