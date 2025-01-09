@@ -1,6 +1,6 @@
 Package: creditr
 Version: 0.6.2
-Date: 2024-12-15
+Date: 2025-01-07
 Title: Credit Default Swaps
 Authors@R: c(
       person(given = "Yanrong", 
