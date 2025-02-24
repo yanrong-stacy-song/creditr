@@ -40,8 +40,10 @@ get_raw_markit <- function(date, currency){
   
   ## markit rates URL
   
-  ratesURL <- paste("https://www.markit.com/news/InterestRates_",
-                    currency, "_", dateInt, ".zip", sep ="")
+  ## ratesURL <- paste("https://www.markit.com/news/InterestRates_",
+  ##                   currency, "_", dateInt, ".zip", sep ="")
+  ratesURL <- paste("https://rfr.ihsmarkit.com/InterestRates_",
+                    currency, "_", dateInt, ".zip?email=creditr.rfr@gmail.com", sep ="")
   
   ## define an internal function here for URL handling
   
@@ -56,7 +58,7 @@ get_raw_markit <- function(date, currency){
                               verbose = FALSE,
                               ssl.verifypeer = FALSE),
                   error = function(e) {
-                    return("Rates data not available at https://www.spglobal.com/en")
+                    return("Rates data not available at https://rfr.ihsmarkit.com")
                   })
     close(f)
     if (inherits(a, "character")){
@@ -74,9 +76,18 @@ get_raw_markit <- function(date, currency){
       
       if(length(files) == 0){
         stop(
-          "Either an internet connection problem occurs or the data
-        of the required date are unavailable on the internet. Try 
-        again later.")
+          # "Either an internet connection problem occurs or the data
+          # of the required date are unavailable on the internet. Try 
+          # again later."
+          "S&P (IHS Markit) RFR rates are only available on a rolling ~42 days
+          basis. You can view what exact dates are available now at 
+          https://rfr.ihsmarkit.com/. The package has historical rates 
+          (before the S&P / IHS / Markit mergers+acquisitions) from 
+          2004-01-01 till 2015-08-03 too. If you query outside of these two
+          date ranges, unfortunately RFR rates are not available and no history
+          was recorded
+          "
+        )
       }
       
       doc <- xmlTreeParse(files[grep(".xml", files)], getDTD = F)
@@ -89,35 +100,62 @@ get_raw_markit <- function(date, currency){
   
   xmlParsedIn <- rates.URL(ratesURL)
   
-  ## rates data extracted from XML file
+  # ## rates data extracted from XML file
+  # 
+  # rates <- xmlSApply(xmlParsedIn, function(x) xmlSApply(x, xmlValue))
+  # 
+  # ## extracts the 'M' or 'Y' of the expiry and stores it in curveRates
+  # 
+  # curveRates <- c(rates$deposits[names(rates$deposits) == "curvepoint"],
+  #                 rates$swaps[names(rates$swaps) == "curvepoint"])
+  # 
+  # ## split the numbers from the 'M' and 'Y'
+  # 
+  # x <- do.call(rbind, strsplit(curveRates, split = "[MY]", perl = TRUE))
+  # rownames(x) <- NULL
+  # x <- cbind(x, "Y")
+  # 
+  # ## attacg M to money month rates
+  # 
+  # x[1: (max(which(x[,1] == 1)) - 1), 3] <- "M"
+  # 
+  # ## data frame with Interest Rates, maturity, type, expiry
+  # 
+  # ratesx <- data.frame(expiry = paste(x[,1], x[,3], sep = ""),
+  #                      matureDate = substring(x[,2], 0, 10),
+  #                      rate = substring(x[,2], 11),
+  #                      
+  #                      ## if maturity is 1Y, it is of type M
+  #                      
+  #                      type = c(rep("M", sum(names(rates$deposits) == "curvepoint")),
+  #                               rep("S", sum(names(rates$swaps) == "curvepoint"))))
   
-  rates <- xmlSApply(xmlParsedIn, function(x) xmlSApply(x, xmlValue))
+  # Assume xmlParsedIn is your parsed XML document (e.g. from xmlParse)
+  # Use XPath to extract all <curvepoint> nodes anywhere in the document
+  curvepoints <- getNodeSet(xmlParsedIn, "//curvepoint")
   
-  ## extracts the 'M' or 'Y' of the expiry and stores it in curveRates
+  # Check that nodes were found
+  if(length(curvepoints) == 0){
+    stop("No curvepoint nodes found.")
+  }
   
-  curveRates <- c(rates$deposits[names(rates$deposits) == "curvepoint"],
-                  rates$swaps[names(rates$swaps) == "curvepoint"])
+  # Extract tenor, maturity date, and parrate from each curvepoint node
+  tenor       <- sapply(curvepoints, function(cp) xmlValue(cp[["tenor"]]))
+  maturityDate<- sapply(curvepoints, function(cp) xmlValue(cp[["maturitydate"]]))
+  parrate     <- sapply(curvepoints, function(cp) xmlValue(cp[["parrate"]]))
   
-  ## split the numbers from the 'M' and 'Y'
+  # Create expiry from tenor (e.g., "1M", "2M", "1Y", etc.)
+  expiry <- tenor
   
-  x <- do.call(rbind, strsplit(curveRates, split = "[MY]", perl = TRUE))
-  rownames(x) <- NULL
-  x <- cbind(x, "Y")
+  # Determine type: money market if tenor ends with "M", swap if it ends with "Y"
+  type <- ifelse(grepl("M$", tenor), "M", "S")
   
-  ## attacg M to money month rates
-  
-  x[1: (max(which(x[,1] == 1)) - 1), 3] <- "M"
-  
-  ## data frame with Interest Rates, maturity, type, expiry
-  
-  ratesx <- data.frame(expiry = paste(x[,1], x[,3], sep = ""),
-                       matureDate = substring(x[,2], 0, 10),
-                       rate = substring(x[,2], 11),
-                       
-                       ## if maturity is 1Y, it is of type M
-                       
-                       type = c(rep("M", sum(names(rates$deposits) == "curvepoint")),
-                                rep("S", sum(names(rates$swaps) == "curvepoint"))))
+  # Build the data frame with the extracted values
+  ratesx <- data.frame(expiry = expiry,
+                       matureDate = maturityDate,
+                       rate = parrate,
+                       type = type,
+                       stringsAsFactors = FALSE)
   
   ratesx$expiry <- as.character(ratesx$expiry)
   
