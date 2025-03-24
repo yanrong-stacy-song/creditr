@@ -81,7 +81,7 @@ Example Usage
 --------------------------------------------------------
 ```r
 library(creditr)
-sample_cds <- CDS(name = 'Test',
+sample_cds <- CDS(name     = 'Test',
                   contract = "SNAC",
                   RED      = NULL,
                   date     = as.Date("2014-05-27"),
