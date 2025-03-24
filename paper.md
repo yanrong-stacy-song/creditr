@@ -47,19 +47,24 @@ affiliations:
 
 # Summary
 
-A credit default swap (CDS) is a bilateral agreement between two parties (the protection buyer and the protection seller) with respect to default by a third party. Over the past two decades, CDS have been one of the fastest growing parts of the financial markets. First, we explain the basics of CDS along with key concepts like coupon, spread, notional, recovery rate, upfront, probability of default and the ISDA Standard Model. Second, we introduce Markit and Bloomberg, the two primary sources for CDS data and analytics. Third, we describe the creditr \textbf{R} package, an open source tool which allows users to calculate information related to CDS.
-
+The `creditr` \textbf{R} package is an open-source tool for modeling and valuing credit default swaps (CDS). CDS are financial derivatives that allow investors to hedge or speculate on credit risk by providing protection against the default of a third party. Widely used in financial markets, CDS require complex pricing models to account for variables such as recovery rate, coupon, interest rate, and default probabilities. The `creditr` package  provides users with tools to calculate CDS spreads, upfront payments, and other related quantities using the *ISDA Standard Model*, the industry benchmark for CDS pricing. The package enables users to replicate outputs from proprietary platforms such as Bloomberg and Markit, offering a transparent and scriptable alternative for CDS pricing and analytics. Designed for fixed income researchers and finance practitioners, `creditr` makes quantitative credit modeling accessible within the \textbf{R} programming ecosystem.
 
 
 # Statement of need
 
-This paper explains the mechanics of credit default swaps (CDS), a type of \textbf{credit derivative} that, in exchange for payment, transfers \textbf{credit risk} from one group of investors to another. First, we introduce the concept of CDS with an analogy to housing insurance, and highlight that a CDS allows one party to purchase insurance against the default of a specific bond from another party. This insurance is usually called ``protection.'' We then introduce some simplified examples of one-period and two-period CDS in which a portfolio manager at Highbridge purchases protection from Citigroup. Many important concepts are introduced: \textbf{notional amount}, \textbf{coupon} and \textbf{spread}. We then explore complications that alter CDS pricing calculations, such as \textbf{interest rates}, \textbf{recovery rate}, \textbf{probability of default}, \textbf{accrued coupon} and \textbf{upfront payment}. Further complexity arises from allowing for a non-constant probability of default and non-constant interest rates. We then consider the N-period CDS as a more accurate model of real transactions. Further complications such as calculus for the continuous case will be introduced, as a culmination for this theoretical section.
-  
-The next section focuses on real world data from Bloomberg and Markit, the two sources most often used by professional investors. For Bloomberg, we will dive into the specifics of the Deal Section, Calculator Section and Market Section to see how theoretical CDS concepts are used in practice. We then explore the Markit CDS Calculator, with an emphasis on the terminology differences from Bloomberg.
+Despite the importance of credit derivatives in modern financial markets, most CDS pricing tools remain embedded in proprietary platforms such as Bloomberg or Markit and have limited accessibility and reproducibility outside of these platforms, imposing significant entry barrier to new practitioners and academics. Existing open-source financial libraries also have very limited support for credit derivatives, especially those following the ISDA Standard Model.
 
-Finally, we introduce the \textbf{creditr} package, which allows users to calculate information regarding a particular CDS in \textbf{R}. The creditr package uses the same ISDA Standard Model that Bloomberg and the Markit CDS Calculator use, and provides generic methods to output the calculation results in a way that is similar to Bloomberg and Markit.
+The `creditr` package addresses this gap by providing a fully open-source implementation of key CDS pricing routines. Suppose a researcher wishes to compute the fair upfront cost of buying CDS protection on a corporate bond with a 5-year maturity and a quoted spread of 150 basis points. Using `creditr`, the user can specify the notional amount, recovery rate, interest rate term structure, and default probability curve, then call the `calc_upfront()` function to obtain the fair premium or cost. The results can be compared directly with Bloomberg's CDS Calculator output, ensuring practical consistency with industry tools.
+
+Overall, `creditr` enables users to:
+
+- Compute the fair spread or upfront payment for a CDS given market inputs.
+- Perform sensitivity analysis with respect to interest rates, recovery rates, and default curves.
+- Replicate the outputs of the Bloomberg CDS Calculator and Markit CDS pricers and demystify the mechanics behind CDS pricing.
 
 # Citations
+
+ISDA CDS Standard Model: https://www.cdsmodel.com/. Last Update in 2022. S&P Global Market Intelligence.
 
 Lenzner, Robert. March 2009. "Who's Afraid Of Credit Default Swaps?" Forbes.
 
