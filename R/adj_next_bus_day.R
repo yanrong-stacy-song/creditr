@@ -1,7 +1,7 @@
 #' Adjust to next business day.
 #' 
 #' \code{adj_next_bus_day} gets the next business day following 5D bus day
-#' convention.
+#' convention. It does not consider trading holidays.
 #' 
 #' @param date, a \code{Date} type.
 #'   
