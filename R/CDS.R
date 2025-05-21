@@ -17,7 +17,7 @@
 #' @param notional is the amount of the underlying asset on which the payments
 #'   are based. Default is 10000000, i.e. 10MM.
 #'   
-#' @return a \code{CDS} class object including the input informtion on the
+#' @return a \code{CDS} class object including the input information on the
 #'   contract as well as the valuation results of the contract.
 #'   
 #' @examples

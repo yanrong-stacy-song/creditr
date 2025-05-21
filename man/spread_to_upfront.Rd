@@ -38,7 +38,7 @@ seller on an annual basis.}
 \item{maturity.var}{character, column in x containing maturity date.}
 
 \item{recovery.var}{character, column in x containing recovery rates. ISDA
-model standard recovery rate asscumption is 0.4.}
+model standard recovery rate assumption is 0.4.}
 
 \item{isPriceClean}{refers to the type of upfront calculated. It is
 boolean. When \code{TRUE}, calculate principal only. When

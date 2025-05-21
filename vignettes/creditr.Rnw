@@ -135,7 +135,7 @@ Consider a simpler form of purchasing protection: property insurance.
 
 Suppose that a homeowner wants to purchase \$100,000 worth of property insurance on her house, covering the period from January 1 through December 31. For one year of coverage, an insurance company charges a fee of \$1,000. Call this \$1,000 the \textbf{premium}. In exchange for the premium, the insurance company agrees to pay \$100,000 to the homeowner if there is any property damage during that year. If damage does not occur, then the insurance company pockets the \$1,000 premium and doesn't pay anything to the homeowner. 
 
-In this simplified insurance agreement, the homeowner pays the premium on January 1, the beginning of the coverage period. If the property is damaged, the insurance company pays the \$100,000 on December 31, regardless of when the damage occured. The interest rate is 0\%.
+In this simplified insurance agreement, the homeowner pays the premium on January 1, the beginning of the coverage period. If the property is damaged, the insurance company pays the \$100,000 on December 31, regardless of when the damage occurred. The interest rate is 0\%.
 
 The \textbf{expected cash flows} for the agreement depend on the probability of property damage. Since the homeowner will pay the \$1,000 premium and will potentially receive \$100,000---if the house gets damaged---the homeowner's expected cash flows are as follows. ($P_h$ refers to the homeowner's estimate of probability of the property damage.)
 
@@ -373,7 +373,7 @@ So, we need to factor the recovery rate into our calculation of expected cash fl
   \rm - C + (P \times V \times (1 - RR)) &= C - (P \times V \times (1 - RR))
 \end{align}
 
-Note that the above equation is an extension of Equation \eqref{eqn:SimpleOnePeriod}, the only difference being that we mupltipled $V$ by (1 - RR) to account for the change in the protection leg. The protection seller only has to pay the fraction of the notional amount that the recovery rate does \emph{not} account for (hence (1 - RR) instead of just $RR$). Another term for this amount is the loss given default (LGD):
+Note that the above equation is an extension of Equation \eqref{eqn:SimpleOnePeriod}, the only difference being that we multiplied $V$ by (1 - RR) to account for the change in the protection leg. The protection seller only has to pay the fraction of the notional amount that the recovery rate does \emph{not} account for (hence (1 - RR) instead of just $RR$). Another term for this amount is the loss given default (LGD):
 
 \begin{equation}
  \begin{aligned}
@@ -405,7 +405,7 @@ Therefore, $P$ is 1.8\% (rounded to the nearest tenth) in this scenario where th
 
 When a default does occur, the protection seller would owe the protection buyer the notional amount minus any money recovered from the company. It must be noted that the protection is effective for the credit events that have taken place since 60 days \textit{before} the trade date; this date is known as the \textbf{backstop date}. Before the ``Big Bang Protocol'' in April 2009, this date used to be one day \textit{after} the trade date. If there is a delay in awareness about a credit event, the new system allows sufficient time for the two dealers to discover and process the information. 
 
-Should a bond (that is the reference obligation in a CDS agreement) default, the counterparties can compensate accordingly in two ways. The first is a \textbf{physical settlement} in which the buyer will actually deliver the defaulted bonds to seller, and the seller will then pay the face value of those bonds. The disadvantage to this particular transcation is that the buyer(s) of protection will have to find and deliver those bonds to the seller even if they don't own the bonds themselves. This may artificially drive up the price of the bonds, and is more likely to happen when there is a large number of outstanding CDS contracts. 
+Should a bond (that is the reference obligation in a CDS agreement) default, the counterparties can compensate accordingly in two ways. The first is a \textbf{physical settlement} in which the buyer will actually deliver the defaulted bonds to seller, and the seller will then pay the face value of those bonds. The disadvantage to this particular transaction is that the buyer(s) of protection will have to find and deliver those bonds to the seller even if they don't own the bonds themselves. This may artificially drive up the price of the bonds, and is more likely to happen when there is a large number of outstanding CDS contracts. 
 
 The alternative to a physical settlement is a \textbf{cash settlement}, in which the seller simply pays the following to the buyer: notional amount $\times$ (1 - recovery rate). Unfortunately, determining a recovery rate is often an issue. One approach the ISDA has adopted lately is an \textbf{auction} style process in which major dealers submit their bids for the value they place on a company's debt.  CDS contracts for corporate bonds generally assume a 40\% recovery rate for valuation purposes.
 
@@ -498,7 +498,7 @@ Date & Mark-to-market & $P\&L_H$ & $P\&L_C$ & Accrued Coupon \\
    \hline
 \end{tabular}
 }
-\caption{This table measures the mark-to-market value, the P\&L for both parties, and the accrued coupon value over the life of the contract. Note that the mark-to-market values and accrued coupon values are the same for each date. In other words, the accured coupon that accounts for the time passed is equal to the price that a prospective buyer would have to pay Highbridge for protection for the remainder of the CDS. The absolute value of each party's P\&L is also equal to the accrued coupon value; the accrued coupon that accounts for the time passed is equal to the money the Citigroup has earned by providing protection for the time passed.}
+\caption{This table measures the mark-to-market value, the P\&L for both parties, and the accrued coupon value over the life of the contract. Note that the mark-to-market values and accrued coupon values are the same for each date. In other words, the accrued coupon that accounts for the time passed is equal to the price that a prospective buyer would have to pay Highbridge for protection for the remainder of the CDS. The absolute value of each party's P\&L is also equal to the accrued coupon value; the accrued coupon that accounts for the time passed is equal to the money the Citigroup has earned by providing protection for the time passed.}
 \end{table}
 
 As we can see, the accrued coupon increases as the contract matures---or, in other words, the coupon that accounts for the time in the contract that has passed \emph{increases} as the contract matures.
@@ -537,7 +537,7 @@ In fact, that is a simplified example of how protection buyers and sellers deter
 One issue with this system was that traders could not easily trade CDS, since each CDS had a specific coupon.
 For example, investment banks like Citigroup often buy protection for one CDS and sell protection for another so as to offset each deal and \textbf{hedge} its risk. However, this became difficult to do when the CDS agreements had different coupons and thus different expected cash flows.
 
-So, in 2009, a regulatory organization known as the International Swaps and Derivates Association (ISDA) 
+So, in 2009, a regulatory organization known as the International Swaps and Derivatives Association (ISDA) 
 introduced new CDS market conventions in North America which required buyers and sellers to trade at coupons of 100 bps or 500 bps. This, along with a number of other regulatory changes, came to be known as the `Big Bang Protocol`. Since then, the spread of a CDS no longer signifies the coupon at which the CDS is traded; instead, the spread is the coupon that the CDS \emph{would} be traded at in a market without standardized coupons---or the coupon that the CDS would have been traded at before 2009. In order to account for the discrepancy between the spread and the standardized coupon at which a CDS must trade, protection buyers and sellers use \textbf{upfront payments}, discussed in the next section.
 
 \subsubsection{Upfront Payment}
@@ -599,7 +599,7 @@ Date & $P$ & Mark-to-market & Upfront Payment \\
    \hline
 \end{tabular}
 }
-\caption{As the contract matures from January 1 to December 31, the value of the upfront payment (in a CDS where the coupon is 1\%, the notional amount is \$100,000, and the risk-neutral probability of default is 3\%) decreases from \$2,000 to \$0. Note that the true mark-to-market value of the CDS on, say June 30, would actually be the value in the mark-to-market column \emph{plus} the value in the upfront payment column---becasue that is the total amount that the prospective protection buyer would have to pay to own the protection. However, for clarity, in this table we will view the values in the mark-to-market column as values that represent the coupon the prospective buyer would have to pay.}
+\caption{As the contract matures from January 1 to December 31, the value of the upfront payment (in a CDS where the coupon is 1\%, the notional amount is \$100,000, and the risk-neutral probability of default is 3\%) decreases from \$2,000 to \$0. Note that the true mark-to-market value of the CDS on, say June 30, would actually be the value in the mark-to-market column \emph{plus} the value in the upfront payment column---because that is the total amount that the prospective protection buyer would have to pay to own the protection. However, for clarity, in this table we will view the values in the mark-to-market column as values that represent the coupon the prospective buyer would have to pay.}
 \label{tbl:upfrontValue}
 \end{table}
 
@@ -623,7 +623,7 @@ As such, on June 30, the value of the upfront payment is \$1,000---which is what
 
 Note that in Equation \eqref{eqn:Upfront}, $C$ and $V$ are known or pre-determined values, since $C$ is standardized by the ISDA and $V$ is agreed upon by the protection buyer and seller. As such, $P$ and $U$ can be considered the unknown variables; one needs to know the value of $P$ to determine the value of $U$, and vice versa.
 
-Also, it is important to distinguish between two upfront payments: the \textbf{dirty upfront} and \textbf{clean upfront}. However, the the difference of the two upfront payments involves the concept of \textbf{accrued interest rates} which will be introduced in the N-period CDS example. For readeres who are familiar with this concept, dirty upfront payment takes accrued interest rates into account, while clean upfront payment does not. Therefore, dirty upfront payment is the actual upfront payment that one party pays to the other.
+Also, it is important to distinguish between two upfront payments: the \textbf{dirty upfront} and \textbf{clean upfront}. However, the the difference of the two upfront payments involves the concept of \textbf{accrued interest rates} which will be introduced in the N-period CDS example. For readers who are familiar with this concept, dirty upfront payment takes accrued interest rates into account, while clean upfront payment does not. Therefore, dirty upfront payment is the actual upfront payment that one party pays to the other.
 
 \subsubsection{One-Period Summary}
 
@@ -1026,7 +1026,7 @@ This is a screenshot of the online Markit CDS Calculator. It shows the same trad
 \subsubsection{Terminology Differences}
 On the upper left, \textbf{Trade Level} means the same as \textbf{spread}. We can present spread in either basis points (``bp'') or percentages. In ``CDS Contract Terms,'' \textbf{Running Cpn} just means \textbf{coupon}. In ``Advanced Terms,'' \textbf{Holiday Code} refers to the holiday convention we are using. As we recall, CDS trading in JPY follows a different holiday convention than in other currencies. Therefore, we can select either ``none'' or ``JPY'' for ``Holiday Code.''
 
-In ``Calculation Results,'' \textbf{Cash Settlement} is the same as \textbf{Cash Amount} in Bloomberg, \textbf{Clean Price} is same as \textbf{Price}, the \textbf{Accured Amount} in Markit and Bloomberg has different signs (one is positive while the other negative), and \textbf{Credit DV01} is the same as \textbf{Spread DV01}.
+In ``Calculation Results,'' \textbf{Cash Settlement} is the same as \textbf{Cash Amount} in Bloomberg, \textbf{Clean Price} is same as \textbf{Price}, the \textbf{Accrued Amount} in Markit and Bloomberg has different signs (one is positive while the other negative), and \textbf{Credit DV01} is the same as \textbf{Spread DV01}.
 
 \subsubsection{Yield Curve Section and Discount Factor}
 

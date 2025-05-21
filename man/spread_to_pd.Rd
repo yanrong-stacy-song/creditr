@@ -2,7 +2,7 @@
 % Please edit documentation in R/spread_to_pd.R
 \name{spread_to_pd}
 \alias{spread_to_pd}
-\title{Calcualte Default Probability with Spread}
+\title{Calculate Default Probability with Spread}
 \usage{
 spread_to_pd(
   x,
@@ -18,7 +18,7 @@ spread_to_pd(
 \item{x}{data frame, contains all the relevant columns.}
 
 \item{recovery.var}{character, column in x containing recovery rates. ISDA
-model standard recovery rate asscumption is 0.4.}
+model standard recovery rate assumption is 0.4.}
 
 \item{currency.var}{character, column in x containing currency.}
 

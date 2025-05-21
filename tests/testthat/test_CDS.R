@@ -31,7 +31,7 @@ test_that("test for the CDS", {
   expect_equal(42.55, round(result.1@price, 2))
   
   ## The following results do not match exactly, so we will check
-  ## to see if our calcualted results are within an acceptable range
+  ## to see if our calculated results are within an acceptable range
   ## of the true values from Bloomberg
  
   expect_true(rel.diff(5707438, result.1@upfront))
@@ -62,7 +62,7 @@ test_that("test for the CDS", {
   expect_equal(658080, round(result.2@principal))
   
   ## The following results do not match exactly, so we will check
-  ## to see if our calcualted results are within an acceptable range
+  ## to see if our calculated results are within an acceptable range
   ## of the true values from Bloomberg
   
   expect_true(rel.diff(-169.33, result.2@IR.DV01))
@@ -95,7 +95,7 @@ test_that("test for the CDS", {
   expect_equal(100.05, round(result.3@price, 2))
   
   ## The following results do not match exactly, so we will check
-  ## to see if our calcualted results are within an acceptable range
+  ## to see if our calculated results are within an acceptable range
   ## of the true values from Bloomberg
   
   expect_true(rel.diff(1.29, result.3@IR.DV01))
@@ -121,7 +121,7 @@ test_that("test for the CDS", {
   expect_equal(55.5, round(result.4@price, 1))
   
   ## The following results do not match exactly, so we will check
-  ## to see if our calcualted results are within an acceptable range
+  ## to see if our calculated results are within an acceptable range
   ## of the true values from Bloomberg
   
   expect_true(rel.diff(4412500, result.4@upfront))
@@ -150,7 +150,7 @@ test_that("test for the CDS", {
   expect_equal(43.5, round(result.5@price, 1))
   
   ## The following results do not match exactly, so we will check
-  ## to see if our calcualted results are within an acceptable range
+  ## to see if our calculated results are within an acceptable range
   ## of the true values from Bloomberg
   
   expect_true(rel.diff(5612324, result.5@upfront))
@@ -182,7 +182,7 @@ test_that("test for the CDS", {
   expect_equal(701502, round(result.6@upfront))
   
   ## The following results do not match exactly, so we will check
-  ## to see if our calcualted results are within an acceptable range
+  ## to see if our calculated results are within an acceptable range
   ## of the true values from Bloomberg
   
   expect_true(rel.diff(-184.69, result.6@IR.DV01))
@@ -212,7 +212,7 @@ test_that("test for the CDS", {
   expect_equal(3275000, round(result.7@principal))
   
   ## The following results do not match exactly, so we will check
-  ## to see if our calcualted results are within an acceptable range
+  ## to see if our calculated results are within an acceptable range
   ## of the true values from Bloomberg
   
   expect_true(rel.diff(-648.12, result.7@IR.DV01))
@@ -239,7 +239,7 @@ test_that("test for the CDS", {
   expect_equal(28068, round(result.8@principal))
   
   ## The following results do not match exactly, so we will check
-  ## to see if our calcualted results are within an acceptable range
+  ## to see if our calculated results are within an acceptable range
   ## of the true values from Bloomberg
   
   expect_true(rel.diff(-7.36, result.8@IR.DV01))

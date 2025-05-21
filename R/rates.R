@@ -55,7 +55,7 @@
 #'   Also, please notice that in \code{rates.RData}, a currency's type of 
 #'   expiries generally stays the same along the time, but not always. For 
 #'   example, we check the expiry type of USD in \code{rates.RData}: for 
-#'   2004-01-01, there are two types of expirty: 1M, 3Y; for 2006-01-01, there 
+#'   2004-01-01, there are two types of expiry: 1M, 3Y; for 2006-01-01, there 
 #'   are five types of expiry: 1M, 2M, 3M, 6M, 1Y; for 2007-01-01, there are 18 
 #'   types of expiry; for 2014-01-01, there are 19 types of expiry. Therefore, 
 #'   for a trader, she should always keep in mind to update her knowledge of the
