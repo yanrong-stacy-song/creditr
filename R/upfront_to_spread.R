@@ -12,7 +12,7 @@
 #'   points. It specifies the payment amount from the protection buyer to the 
 #'   seller on an annual basis.
 #' @param recovery.var character, column in x containing recovery rates. ISDA
-#'   model standard recovery rate asscumption is 0.4.
+#'   model standard recovery rate assumption is 0.4.
 #' @param recovery numeric, the recovery rate for all pricing if there isn't a 
 #'   recovery.var
 #' @param points.var character name of points Upfront column

@@ -1,4 +1,4 @@
-#' Calcualte Default Probability with Spread
+#' Calculate Default Probability with Spread
 #' 
 #' \code{spread_to_pd} approximates the default probability at time given the 
 #' spread

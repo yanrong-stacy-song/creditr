@@ -8,17 +8,17 @@
 #' 
 #' @param start.date is the start date of the data frame; it is the earliest CDS
 #'   pricing date that the user concerns.
-#' @param end.date is the end date of the data frame; it is the lastest CDS 
+#' @param end.date is the end date of the data frame; it is the latest CDS 
 #'   pricing date that the user concerns.
 #'   
 #' @return a data frame that contains the CDS pricing date, the currency, the 
 #'   interest rate expiry and the interest rate.
 #'   
 #' @details
-#' since Markit wesite has the interest rates back to th 1990s, download_markit 
+#' Since the Markit website has the interest rates back to the 1990s, download_markit 
 #' is responsible for building up all the USD interest rate data frame; for EUR 
 #' and JPY, markit can only get from 2005-01-05 to now. But the biggest 
-#' advantage of using download_markit is that, since Markit website only lists 
+#' advantage of using download_markit is that, since the Markit website only lists 
 #' the rate expiries that are actually used for CDS pricing, download_markit can
 #' get the exact type of expiries of rates needed to price CDS. Also, it has 
 #' expiry over 1Y to 30Y. In contrast, FRED is only complementary to markit 
@@ -27,7 +27,7 @@
 #' markit). FRED has almost all data for any date, which is its biggest 
 #' advantage. But its biggest disadvantage is that it doesn't know which expiry 
 #' type is suitable for which time, since FRED website has expiry of all types 
-#' below a year; also it doesn't have expiry over 1Y.So we hardcoded the dates 
+#' below a year; also it doesn't have expiry over 1Y. So we hardcoded the dates 
 #' below, to combine markit and FRED in the most suitable way.
 #' 
 #' Another note is that, the rates on both Markit website and FRED website have 

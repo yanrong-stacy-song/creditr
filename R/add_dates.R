@@ -12,7 +12,7 @@
 #' @return a date frame containing all the input columns, as well as eight more 
 #'   columns: stepinDate (T+1), valueDate (T+3 business days), startDate 
 #'   (accrual begin date), endDate (maturity), backstopDate (T-60 day look back 
-#'   from which 'protection' is effective), firstcouponDate (the date on which 
+#'   from which 'protection' is effective), firstCouponDate (the date on which 
 #'   the first coupon is paid), pencouponDate (second to last coupon date), and 
 #'   baseDate (the starting date for the IR curve)
 #'   

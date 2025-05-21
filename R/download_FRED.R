@@ -9,7 +9,7 @@
 #' @param currency is the three-letter currency code. As of now, it works for
 #'   USD, EUR, and JPY. The default is JPY.
 #'   
-#' @return a data frame that contains the rates based on the ISDA pecifications
+#' @return a data frame that contains the rates based on the ISDA specifications
 #'   
 #' @import zoo
 #' @importFrom utils head tail

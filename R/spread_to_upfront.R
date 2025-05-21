@@ -14,7 +14,7 @@
 #'   points. It specifies the payment amount from the protection buyer to the 
 #'   seller on an annual basis.
 #' @param recovery.var character, column in x containing recovery rates. ISDA
-#'   model standard recovery rate asscumption is 0.4.
+#'   model standard recovery rate assumption is 0.4.
 #' @param notional is the amount of the underlying asset on which the
 #'        payments are based. Default is 10000000, i.e. 10MM.
 #' @param isPriceClean refers to the type of upfront calculated. It is

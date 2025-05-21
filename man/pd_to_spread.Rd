@@ -17,7 +17,7 @@ pd_to_spread(
 \item{x}{data frame, contains all the relevant columns.}
 
 \item{recovery.var}{character, column in x containing recovery rates. ISDA
-model standard recovery rate asscumption is 0.4.}
+model standard recovery rate assumption is 0.4.}
 
 \item{currency.var}{character, column in x containing currency.}
 
