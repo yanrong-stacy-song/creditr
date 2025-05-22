@@ -62,6 +62,8 @@ Overall, `creditr` enables users to:
 - Perform sensitivity analysis with respect to interest rates, recovery rates, and default curves.
 - Replicate the outputs of the Bloomberg CDS Calculator and Markit CDS pricers and demystify the mechanics behind CDS pricing.
 
+Please note that the **creditr** \textbf{R} package is a wrapper around ISDA's standard CDS model in \textbf{C++}.
+
 # Citations
 
 ISDA CDS Standard Model: https://www.cdsmodel.com/. Last Update in 2022. S&P Global Market Intelligence.
