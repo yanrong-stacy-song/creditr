@@ -1,4 +1,4 @@
-context("Test values in rates data frame")
+## Test values in rates data frame
 
 data(rates)
 

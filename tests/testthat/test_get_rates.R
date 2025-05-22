@@ -1,4 +1,4 @@
-context("Test get_rates")
+## Test get_rates
 
 test_that("test for get_rates",{
   ## US treasury yield curve from April 15, 2014

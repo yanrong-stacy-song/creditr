@@ -1,4 +1,4 @@
-context("Test add_dates")
+## Test add_dates
 
 ## Test cases for the add_dates function (using data from April 15, 2014 for Norske
 ## Skogindustrier ASA).
@@ -83,7 +83,7 @@ test_that("test for add_dates", {
   expect_equal(x$endDate, as.Date("2015-06-20"))
 })
 
-context("JPY holidays baseDate test")
+## JPY holidays baseDate test
 
 test_that("Test JPY holidays",{
   

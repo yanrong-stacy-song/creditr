@@ -1,4 +1,4 @@
-context("Test illegal input to add_conventions")
+## Test illegal input to add_conventions
 
 test_that("error should occur if there is no currency.var ",{
   
@@ -6,7 +6,7 @@ test_that("error should occur if there is no currency.var ",{
   expect_error(add_conventions(x))
 })
 
-context("Test add_conventions")
+## Test add_conventions
 
 test_that("test add conventions", {
   

@@ -1,4 +1,4 @@
-context("Test adj_next_bus_day")
+## Test adj_next_bus_day
 
 test_that("test adj_next_bus_day", {
   
