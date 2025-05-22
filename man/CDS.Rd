@@ -45,7 +45,7 @@ protection buyer to the seller on a regular basis. The default is 100 bps.}
 are based. Default is 10000000, i.e. 10MM.}
 }
 \value{
-a \code{CDS} class object including the input informtion on the
+a \code{CDS} class object including the input information on the
   contract as well as the valuation results of the contract.
 }
 \description{

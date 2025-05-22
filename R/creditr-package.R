@@ -29,7 +29,6 @@
 #' @exportMethod summary show
 #'   
 #' @import quantmod
-#' @import devtools
 #' @import methods
 #' @import zoo
 #' @import Rcpp
