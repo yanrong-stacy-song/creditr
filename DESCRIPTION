@@ -41,13 +41,13 @@ Authors@R: c(
   )
 Depends: R (>= 3.1.0)               
 Imports: utils,
-             quantmod,
-             methods,
-             Rcpp (>= 0.10.6),
-             RCurl,
-             XML,
-             zoo,
-             xts
+         quantmod,
+         methods,
+         Rcpp (>= 0.10.6),
+         RCurl,
+         XML,
+         zoo,
+         xts
 LinkingTo: Rcpp
 Suggests: devtools, testthat
 License: file LICENSE

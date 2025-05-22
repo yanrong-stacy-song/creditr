@@ -52,8 +52,8 @@ get_raw_markit <- function(date, currency){
     tf <- tempfile()
     td <- tempdir()
     
-    f <- CFILE(tf, mode="wb")
-    a <- tryCatch(curlPerform(url = URL,
+    f <- RCurl::CFILE(tf, mode="wb")
+    a <- tryCatch(RCurl::curlPerform(url = URL,
                               writedata = f@ref, noprogress=TRUE,
                               verbose = FALSE,
                               ssl.verifypeer = FALSE),
@@ -90,8 +90,8 @@ get_raw_markit <- function(date, currency){
         )
       }
       
-      doc <- xmlTreeParse(files[grep(".xml", files)], getDTD = F)
-      return(xmlRoot(doc))
+      doc <- XML::xmlTreeParse(files[grep(".xml", files)], getDTD = F)
+      return(XML::xmlRoot(doc))
     }
   }
   
@@ -102,7 +102,7 @@ get_raw_markit <- function(date, currency){
   
   # ## rates data extracted from XML file
   # 
-  # rates <- xmlSApply(xmlParsedIn, function(x) xmlSApply(x, xmlValue))
+  # rates <- xmlSApply(xmlParsedIn, function(x) xmlSApply(x, XML::xmlValue))
   # 
   # ## extracts the 'M' or 'Y' of the expiry and stores it in curveRates
   # 
@@ -132,7 +132,7 @@ get_raw_markit <- function(date, currency){
   
   # Assume xmlParsedIn is your parsed XML document (e.g. from xmlParse)
   # Use XPath to extract all <curvepoint> nodes anywhere in the document
-  curvepoints <- getNodeSet(xmlParsedIn, "//curvepoint")
+  curvepoints <- XML::getNodeSet(xmlParsedIn, "//curvepoint")
   
   # Check that nodes were found
   if(length(curvepoints) == 0){
@@ -140,9 +140,9 @@ get_raw_markit <- function(date, currency){
   }
   
   # Extract tenor, maturity date, and parrate from each curvepoint node
-  tenor       <- sapply(curvepoints, function(cp) xmlValue(cp[["tenor"]]))
-  maturityDate<- sapply(curvepoints, function(cp) xmlValue(cp[["maturitydate"]]))
-  parrate     <- sapply(curvepoints, function(cp) xmlValue(cp[["parrate"]]))
+  tenor       <- sapply(curvepoints, function(cp) XML::xmlValue(cp[["tenor"]]))
+  maturityDate<- sapply(curvepoints, function(cp) XML::xmlValue(cp[["maturitydate"]]))
+  parrate     <- sapply(curvepoints, function(cp) XML::xmlValue(cp[["parrate"]]))
   
   # Create expiry from tenor (e.g., "1M", "2M", "1Y", etc.)
   expiry <- tenor
