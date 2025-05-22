@@ -54,14 +54,14 @@ You can install the `creditr` package from CRAN:
 install.packages("creditr")
 ```
 
-Or install the development version from GitHub using the `devtools` package:
+Or install the development version from GitHub using the `remotes` package:
 
 ```r
-# Install devtools if not already installed
-install.packages("devtools")
+# Install remotes if not already installed
+install.packages("remotes")
 
 # Install creditr from GitHub
-devtools::install_github("yanrong-stacy-song/creditr")
+remotes::install_github("yanrong-stacy-song/creditr")
 ```
 
 Dependencies
@@ -69,15 +69,12 @@ Dependencies
 `creditr` depends on several `R` packages such as:
 
 - `quantmod`
-- `devtools`
 - `methods`
 - `Rcpp`
 - `RCurl`
 - `XML`
 - `zoo`
 - `xts`
-
-All dependencies will be automatically installed when using `install.packages()` or `devtools::install_github()`.
 
 Example Usage
 --------------------------------------------------------
@@ -98,6 +95,10 @@ sample_cds
 ```
 
 For additional examples and use cases, please refer to the package vignette.
+
+Contributing, Requesting Features, And Submitting Pull Requests
+----------------------------------------------------------------------------------------------------
+We welcome contributions! Please see our [contributing guidelines](https://github.com/yanrong-stacy-song/creditr/blob/main/CONTRIBUTING.md) for more details on how to report issues, request features, or submit a pull request.
 
 Acknowledgements
 --------------------------------------------------------
