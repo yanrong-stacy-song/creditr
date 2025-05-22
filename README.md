@@ -40,7 +40,9 @@ The **creditr** package provides an open-source implementation of the ISDA
 Standard Model in `R`. It allows users, such as credit risk 
 modelers and academic researchers, to value CDS contracts and compute various 
 associated risk measures. This package serves as a bridge between the opaque 
-mechanics of CDS pricing and a transparent implementation of it.
+mechanics of CDS pricing and a transparent implementation of it. Please note 
+that the **creditr** `R` package is a wrapper around ISDA's standard CDS model 
+in `C++`.
 
 You can find the package on CRAN at [https://cran.r-project.org/package=creditr](https://cran.r-project.org/package=creditr)
 
