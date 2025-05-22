@@ -19,7 +19,7 @@ download_FRED(
 USD, EUR, and JPY. The default is JPY.}
 }
 \value{
-a data frame that contains the rates based on the ISDA pecifications
+a data frame that contains the rates based on the ISDA specifications
 }
 \description{
 \code{download_FRED} returns the deposits and swap rates for the day input,

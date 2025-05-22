@@ -14,5 +14,5 @@ Date adjusted to the following business day
 }
 \description{
 \code{adj_next_bus_day} gets the next business day following 5D bus day
-convention.
+convention. It does not consider trading holidays.
 }
