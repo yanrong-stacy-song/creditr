@@ -1,4 +1,4 @@
-context("Test rec_risk_01")
+## Test rec_risk_01
 
 test_that("test for rec_risk_01", {
   ## comparing rec_risk_01 calculated by our package for Xerox Corp and Electrolux

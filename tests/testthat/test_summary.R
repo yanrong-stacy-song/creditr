@@ -1,4 +1,4 @@
-context("Test summary")
+## Test summary
 
 library(utils)
 

@@ -1,4 +1,4 @@
-context("Test spread_to_upfront")
+## Test spread_to_upfront
 
 ## Test. In the following test cases we compare the results of 
 ## our upront functions for different data with results from https://www.spglobal.com/en using

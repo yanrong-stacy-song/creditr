@@ -1,4 +1,4 @@
-context("Test spread_to_pd")
+## Test spread_to_pd
 
 test_that("spread_to_pd.test.R", {
   

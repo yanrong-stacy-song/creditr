@@ -1,4 +1,4 @@
-context("Test implied_RR")
+## Test implied_RR
 
 ## test case for implied recovery rate using a data frame containing ids, spreads and pds of 
 ## seven different CDSs

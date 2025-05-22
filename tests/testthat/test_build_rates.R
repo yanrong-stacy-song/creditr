@@ -1,4 +1,4 @@
-context("Test build_rates") 
+## Test build_rates
 
 test_that("build_rates will fail if input is not of the correct type", {
   

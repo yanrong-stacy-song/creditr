@@ -1,4 +1,4 @@
-context("Test check_inputs") 
+## Test check_inputs
 
 test_that("test for check.input", {
   

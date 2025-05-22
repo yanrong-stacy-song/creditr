@@ -1,4 +1,4 @@
-context("Test upfront_to_spread")
+## Test upfront_to_spread
 
 ## upfront_to_spread() test case with data from Xerox corporation
 

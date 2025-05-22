@@ -1,4 +1,4 @@
-context("Test pd_to_spread") 
+## Test pd_to_spread
 
 ## testing results of our function against the results produced by Bloomberg
 
