@@ -28,11 +28,6 @@
 #' @exportClass CDS
 #' @exportMethod summary show
 #'   
-#' @import quantmod
 #' @import methods
-#' @import zoo
 #' @import Rcpp
-#' @import RCurl
-#' @import XML
-#' @import xts
 "_PACKAGE"
