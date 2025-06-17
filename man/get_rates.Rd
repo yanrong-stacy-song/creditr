@@ -26,4 +26,5 @@ a weekday. If not, go to the most recent previous weekday.
 }
 \examples{
 get_rates(as.Date("2014-05-07"), currency = "USD")
+
 }

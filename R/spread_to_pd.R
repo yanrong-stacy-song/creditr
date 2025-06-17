@@ -9,6 +9,8 @@
 #'   formula for probability of default given in the Bloomberg Manual
 #'   
 #' @seealso \code{\link{pd_to_spread}}
+#' 
+#' @export
 
 spread_to_pd <- function(x, 
                          recovery.var = "recovery", 

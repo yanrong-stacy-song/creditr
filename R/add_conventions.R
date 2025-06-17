@@ -25,6 +25,8 @@
 #' x <- data.frame(date = c(as.Date("2014-05-06"), as.Date("2014-05-07")),
 #'                 currency = c("USD", "JPY"))
 #' add_conventions(x)
+#' 
+#' @export
 
 add_conventions <- function(x, currency.var = "currency"){
 

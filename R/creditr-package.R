@@ -23,11 +23,6 @@
 #'   
 #' @useDynLib creditr
 #'   
-#' @exportPattern "^[[:alpha:]]+"
-#'   
 #' @exportClass CDS
 #' @exportMethod summary show
-#'   
-#' @import methods
-#' @import Rcpp
 "_PACKAGE"

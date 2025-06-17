@@ -16,6 +16,8 @@
 #'   
 #' @examples
 #' get_rates(as.Date("2014-05-07"), currency = "USD")
+#' 
+#' @export
 
 get_rates <- function(date, currency){
   

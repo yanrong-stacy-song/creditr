@@ -39,6 +39,7 @@ and currency and returns appropriate dates for pricing a CDS contract.
 x <- data.frame(date = c(as.Date("2014-05-06"), as.Date("2014-05-07")),
                 tenor = rep(5, 2), currency = c("JPY", "USD"))
 add_dates(x)
+
 }
 \references{
 \url{https://www.cdsmodel.com/cdsmodel/assets/cds-model/docs/c-code%20Key%20Functions-v1.pdf

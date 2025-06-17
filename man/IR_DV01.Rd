@@ -65,4 +65,5 @@ x <- data.frame(date = c(as.Date("2014-04-22"), as.Date("2014-04-22")),
                 notional = c(10000000, 10000000),
                 stringsAsFactors = FALSE)
 IR_DV01(x)
+
 }

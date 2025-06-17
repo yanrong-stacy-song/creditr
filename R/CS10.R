@@ -34,6 +34,8 @@
 #'                 notional = c(10000000, 10000000),
 #'                 stringsAsFactors = FALSE)
 #' CS10(x)
+#' 
+#' @export
 
 CS10 <- function(x,
                  date.var      = "date",

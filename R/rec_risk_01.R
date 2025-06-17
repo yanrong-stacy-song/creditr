@@ -18,6 +18,8 @@
 #'                 notional = c(10000000, 10000000),
 #'                 stringsAsFactors = FALSE)
 #' rec_risk_01(x)
+#' 
+#' @export
 
 rec_risk_01 <- function(x,
                         date.var      = "date",
