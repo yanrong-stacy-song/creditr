@@ -11,7 +11,6 @@
 #'   
 #' @return a data frame that contains the rates based on the ISDA specifications
 #'   
-#' @import zoo
 #' @importFrom utils head tail
 #'   
 #' @seealso \code{\link{download_markit}} \code{\link{build_rates}}

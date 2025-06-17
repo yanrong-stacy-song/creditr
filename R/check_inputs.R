@@ -17,6 +17,8 @@
 #'                 recovery = c(0.4, 0.4),
 #'                 notional = c(1000000, 1000000))
 #' x <- check_inputs(x)
+#' 
+#' @export
 
 check_inputs <- function(x,
                          date.var     = "date", 

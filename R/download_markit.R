@@ -14,8 +14,6 @@
 #'   the column reads 2014-04-22, the corresponding rates are actually for 
 #'   2014-04-21.
 #'   
-#' @import zoo
-#' @import xts
 #' @importFrom utils head tail
 #'   
 #' @seealso \code{\link{download_FRED}} \code{\link{build_rates}}
@@ -53,7 +51,7 @@ download_markit <- function(start, end, currency = "USD"){
     ## we use try so that if there is a date where rates are unavailable, it
     ## doesn't stop the function.
     
-    if(is(Rates, "try-error")){
+    if(methods::is(Rates, "try-error")){
       end <- end - 1 
     } else {
       

@@ -18,6 +18,8 @@
 #'                 notional = c(10000000, 10000000),
 #'                 stringsAsFactors = FALSE)
 #' spread_DV01(x)
+#' 
+#' @export
 
 spread_DV01 <- function(x,
                         date.var      = "date",

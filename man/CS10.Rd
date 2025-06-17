@@ -65,4 +65,5 @@ x <- data.frame(date = as.Date(c("2014-04-22", "2014-04-22")),
                 notional = c(10000000, 10000000),
                 stringsAsFactors = FALSE)
 CS10(x)
+
 }

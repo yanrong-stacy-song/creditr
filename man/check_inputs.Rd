@@ -64,4 +64,5 @@ x <- data.frame(date = as.Date(c("2014-04-22", "2014-04-22")),
                 recovery = c(0.4, 0.4),
                 notional = c(1000000, 1000000))
 x <- check_inputs(x)
+
 }

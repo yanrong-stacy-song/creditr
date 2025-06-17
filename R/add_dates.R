@@ -26,6 +26,8 @@
 #' x <- data.frame(date = c(as.Date("2014-05-06"), as.Date("2014-05-07")),
 #'                 tenor = rep(5, 2), currency = c("JPY", "USD"))
 #' add_dates(x)
+#' 
+#' @export
 
 add_dates <- function(x, 
                       date.var     = "date",

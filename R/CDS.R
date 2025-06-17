@@ -22,6 +22,8 @@
 #'   
 #' @examples
 #' x <- CDS(date = as.Date("2014-05-07"), tenor = 5, spread = 50, coupon = 100) 
+#' 
+#' @export
 
 CDS <- function(name = NULL,
                 contract = "SNAC",
@@ -94,7 +96,7 @@ CDS <- function(name = NULL,
 
   ## create object of class CDS using the data we extracted
   
-  cds <- new("CDS",
+  cds <- methods::new("CDS",
              name     = name,
              contract = contract,
              RED      = RED,
