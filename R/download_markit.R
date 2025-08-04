@@ -16,12 +16,11 @@
 #'   
 #' @importFrom utils head tail
 #'   
-#' @seealso \code{\link{download_FRED}} \code{\link{build_rates}}
+#' @seealso \code{\link{build_rates}}
 #'   
 #' @examples
 #' \dontrun{
-#' download_markit(start = as.Date("2005-12-31"), end = as.Date("2006-01-04"), 
-#'                 currency = "JPY")
+#' download_markit(start = Sys.Date() - 10, Sys.Date(), currency = "JPY")
 #' }       
 
 download_markit <- function(start, end, currency = "USD"){

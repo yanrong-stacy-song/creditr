@@ -60,7 +60,8 @@ get_raw_markit <- function(date, currency){
                   error = function(e) {
                     return("Rates data not available at https://rfr.ihsmarkit.com")
                   })
-    close(f)
+    # close(f)
+    RCurl::close(f)
     if (inherits(a, "character")){
       return(a)
     } else {

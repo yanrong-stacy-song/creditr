@@ -13,8 +13,7 @@
 #'   \code{9Y} \code{10Y} \code{12Y} \code{15Y} \code{20Y} \code{30Y} \item rate
 #'   = a numeric vector. The LIBOR rate. }
 #' @details The source of the interest rates in \code{rates.RData} is from 
-#'   \url{https://www.spglobal.com/en} and 
-#'   \url{https://fred.stlouisfed.org/}. When a user is calculating CDS
+#'   \url{https://www.spglobal.com/en}. When a user is calculating CDS
 #'   using the \code{CDS} package, the package calls \code{get_rates} to get the
 #'   needed interest rates; \code{get_rates} then calls the \code{rates.RData} 
 #'   for these interest rates. If a date is unavailable in \code{rates.RData}, 
@@ -66,11 +65,10 @@
 #'   expiry of a currency in a short time. For example, some dates in 
 #'   \code{rates.RData} do not have a \code{expiry} of 3Y for \code{USD}. This 
 #'   is not likely to be caused by data error, since all these data are got from
-#'   Markit and FRED. Users, however, should be aware of that some data seem 
+#'   Markit. Users, however, should be aware of that some data seem 
 #'   "missing".
 #'   
 #' @source \url{https://www.spglobal.com/en} 
-#'   \url{https://fred.stlouisfed.org/}
 #'   
 #' @examples 
 #' data(rates)
@@ -85,6 +83,5 @@
 #' @name rates
 #' @keywords datasets
 #' @keywords interest rates
-#' @seealso \code{\link{download_FRED}} \code{\link{download_markit}}
-#'   \code{\link{build_rates}}
+#' @seealso \code{\link{download_markit}} \code{\link{build_rates}}
 NULL
