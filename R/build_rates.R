@@ -3,8 +3,7 @@
 #' \code{build_rates} can create a data frame of interest rates from a start 
 #' date to an end date, which are specified by the user. The interest rates will
 #' be later used in CDS pricing. \code{build_rates} also builds the rates.RData 
-#' in the package. \code{build_rates} mainly consists \code{download_markit} and
-#' \code{download_FRED}. The two sources are Markit website and FRED website.
+#' in the package. 
 #' 
 #' @param start.date is the start date of the data frame; it is the earliest CDS
 #'   pricing date that the user concerns.
@@ -21,32 +20,24 @@
 #' advantage of using download_markit is that, since the Markit website only lists 
 #' the rate expiries that are actually used for CDS pricing, download_markit can
 #' get the exact type of expiries of rates needed to price CDS. Also, it has 
-#' expiry over 1Y to 30Y. In contrast, FRED is only complementary to markit 
-#' data. Since download_markit can get any rates for USD, we don't use FRED for 
-#' USD. Then we want to get data for EUR and JPY before 2005-01-04 (the limit of
-#' markit). FRED has almost all data for any date, which is its biggest 
-#' advantage. But its biggest disadvantage is that it doesn't know which expiry 
-#' type is suitable for which time, since FRED website has expiry of all types 
-#' below a year; also it doesn't have expiry over 1Y. So we hardcoded the dates 
-#' below, to combine markit and FRED in the most suitable way.
+#' expiry over 1Y to 30Y. Then we want to get data for EUR and JPY before 2005-01-04 (the limit of
+#' markit). 
 #' 
-#' Another note is that, the rates on both Markit website and FRED website have 
+#' Another note is that, the rates on Markit have 
 #' not been adjusted to the previous business day. In other words, the rates 
 #' from both website is the exact rate on that day, rather than on the previous 
-#' business day. But download_markit and download_FRED have adjusted the days 
+#' business day. But download_markit has adjusted the days 
 #' already for the convenience of CDS pricing, so we don't have to worry here.
 #' 
-#' @seealso \link{download_markit} \link{download_FRED} \link{rates}
+#' @seealso \link{download_markit} \link{rates}
 #'   
 #' @references \url{https://www.spglobal.com/en} 
-#'   \url{https://fred.stlouisfed.org/docs/api/fred/}
 #'   
 #' @examples
 #' \dontrun{
 #' ## Running this example will take more than two hours.
-#' 
-#' build_rates(start.date = as.Date("2004-01-01"), 
-#'             end.date = as.Date("2014-08-23"))}
+#' build_rates(start.date = Sys.Date() - 10, end.date = Sys.Date())
+#' }
 
 build_rates <- function(start.date, end.date){
   
@@ -62,8 +53,7 @@ build_rates <- function(start.date, end.date){
   stopifnot(end.date >= start.date)
   
   ## If start date is before and end date is after 2005-01-05,
-  ## then we have to use markit for USD, and both markit and FRED for
-  ## JPY and EUR
+  ## then we have to use markit for USD, JPY and EUR
   
   if(start.date < as.Date("2005-01-05") & end.date >= as.Date("2005-01-05")){
     
@@ -79,18 +69,9 @@ build_rates <- function(start.date, end.date){
     x.markit.JPY <- download_markit(start = as.Date("2005-01-05"), 
                                     end = end.date, currency = "JPY")
     
-    ## Then FRED gets data for EUR and JPY before 2005-01-04; the default expiry
-    ## type is 1M, 2M, 3M, 6M, 1Y (or 12M on FRED)
-    
-    x.FRED.EUR   <- download_FRED(start = start.date, end = as.Date("2005-01-04"), 
-                                  currency = "EUR")
-    x.FRED.JPY   <- download_FRED(start = start.date, end = as.Date("2005-01-04"), 
-                                  currency = "JPY")
-    
     ## bind the data together
     
-    x <- rbind(x.markit.USD, x.FRED.EUR, 
-               x.markit.EUR, x.FRED.JPY, x.markit.JPY)
+    x <- rbind(x.markit.USD, x.markit.EUR, x.markit.JPY)
   } 
   
   ## If start date  and end date are after 2005-01-05, then we only have to use
@@ -107,16 +88,12 @@ build_rates <- function(start.date, end.date){
   } 
   
   ## If start date  and end date are before 2005-01-05, then we have to use
-  ## markit for USD and only FRED for EUR and JPY
+  ## markit for USD
   
   else if(end < as.Date("2005-01-05")){
     x.markit.USD <- download_markit(start = start.date, end = end.date, 
                                     currency = "USD")
-    x.FRED.EUR   <- download_FRED(start = start.date, end = end.date, 
-                                  currency = "EUR")
-    x.FRED.JPY   <- download_FRED(start = start.date, end = end.date, 
-                                  currency = "JPY")  
-    x <- rbind(x.markit.USD, x.FRED.EUR, x.FRED.JPY)
+    x <- rbind(x.markit.USD)
   } 
   
   ## sort the data as required: currently ascending date and ascending currency.

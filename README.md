@@ -68,7 +68,6 @@ Dependencies
 --------------------------------------------------------
 `creditr` depends on several `R` packages such as:
 
-- `quantmod`
 - `methods`
 - `Rcpp`
 - `RCurl`

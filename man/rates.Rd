@@ -14,8 +14,7 @@ A data frame with 194378 observations on the following 4 variables.
   = a numeric vector. The LIBOR rate. }
 }
 \source{
-\url{https://www.spglobal.com/en} 
-  \url{https://fred.stlouisfed.org/}
+\url{https://www.spglobal.com/en}
 }
 \description{
 This data frame is created by \code{build_rates} in \code{creditr} package to
@@ -25,8 +24,7 @@ weekends are available as well as business days.
 }
 \details{
 The source of the interest rates in \code{rates.RData} is from 
-  \url{https://www.spglobal.com/en} and 
-  \url{https://fred.stlouisfed.org/}. When a user is calculating CDS
+  \url{https://www.spglobal.com/en}. When a user is calculating CDS
   using the \code{CDS} package, the package calls \code{get_rates} to get the
   needed interest rates; \code{get_rates} then calls the \code{rates.RData} 
   for these interest rates. If a date is unavailable in \code{rates.RData}, 
@@ -78,7 +76,7 @@ The source of the interest rates in \code{rates.RData} is from
   expiry of a currency in a short time. For example, some dates in 
   \code{rates.RData} do not have a \code{expiry} of 3Y for \code{USD}. This 
   is not likely to be caused by data error, since all these data are got from
-  Markit and FRED. Users, however, should be aware of that some data seem 
+  Markit. Users, however, should be aware of that some data seem 
   "missing".
 }
 \examples{
@@ -92,8 +90,7 @@ rates[rates$currency == "USD" & rates$date == "2005-10-01",]
 
 }
 \seealso{
-\code{\link{download_FRED}} \code{\link{download_markit}}
-  \code{\link{build_rates}}
+\code{\link{download_markit}} \code{\link{build_rates}}
 }
 \keyword{datasets}
 \keyword{interest}
