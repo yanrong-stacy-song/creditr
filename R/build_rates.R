@@ -32,12 +32,7 @@
 #' @seealso \link{download_markit} \link{rates}
 #'   
 #' @references \url{https://www.spglobal.com/en} 
-#'   
-#' @examples
-#' \dontrun{
-#' ## Running this example will take more than two hours.
-#' build_rates(start.date = Sys.Date() - 10, end.date = Sys.Date())
-#' }
+#'
 
 build_rates <- function(start.date, end.date){
   

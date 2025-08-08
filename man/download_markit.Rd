@@ -25,11 +25,6 @@ data frame containing the rates from every day from start to end
 \code{download_markit} takes a data frame of dates and returns a data frame 
 with the yields for different maturities.
 }
-\examples{
-\dontrun{
-download_markit(start = Sys.Date() - 10, Sys.Date(), currency = "JPY")
-}       
-}
 \seealso{
 \code{\link{build_rates}}
 }
