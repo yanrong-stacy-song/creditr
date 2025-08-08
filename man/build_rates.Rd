@@ -39,12 +39,6 @@ from both website is the exact rate on that day, rather than on the previous
 business day. But download_markit has adjusted the days 
 already for the convenience of CDS pricing, so we don't have to worry here.
 }
-\examples{
-\dontrun{
-## Running this example will take more than two hours.
-build_rates(start.date = Sys.Date() - 10, end.date = Sys.Date())
-}
-}
 \references{
 \url{https://www.spglobal.com/en}
 }
