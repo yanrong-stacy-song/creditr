@@ -83,14 +83,14 @@ jobs:
           job-config: ${{ matrix.config.job-config }}
           token: ${{ secrets.RHUB_TOKEN }}
 
-      # --- Added: install LaTeX so Sweave (.Rnw) vignettes can build ---
+      # Install LaTeX so Sweave (.Rnw) vignettes can build
       - name: Install TinyTeX (LaTeX)
         uses: r-lib/actions/setup-tinytex@v2
 
-      # Optional: a few commonly-needed LaTeX packages for vignettes
-      - name: TinyTeX: install common LaTeX packages (optional)
-        run: tlmgr install fancyvrb upquote inconsolata xcolor microtype
-      # -----------------------------------------------------------------
+      # Optional: pre-install a few common LaTeX packages
+      - name: "TinyTeX - install common LaTeX packages (optional)"
+        run: |
+          tlmgr install fancyvrb upquote inconsolata xcolor microtype
 
       - uses: r-hub/actions/platform-info@v1
         with:
