@@ -64,6 +64,9 @@ jobs:
         with:
           token: ${{ secrets.RHUB_TOKEN }}
           job-config: ${{ matrix.config.job-config }}
+        env:
+          R_BUILD_ARGS: '--no-build-vignettes --no-manual'
+          R_CHECK_ARGS: '--ignore-vignettes'
 
   other-platforms:
     needs: setup
@@ -77,21 +80,10 @@ jobs:
 
     steps:
       - uses: r-hub/actions/checkout@v1
-
       - uses: r-hub/actions/setup-r@v1
         with:
           job-config: ${{ matrix.config.job-config }}
           token: ${{ secrets.RHUB_TOKEN }}
-
-      # Install LaTeX so Sweave (.Rnw) vignettes can build
-      - name: Install TinyTeX (LaTeX)
-        uses: r-lib/actions/setup-tinytex@v2
-
-      # Optional: pre-install a few common LaTeX packages
-      - name: "TinyTeX - install common LaTeX packages (optional)"
-        run: |
-          tlmgr install fancyvrb upquote inconsolata xcolor microtype
-
       - uses: r-hub/actions/platform-info@v1
         with:
           token: ${{ secrets.RHUB_TOKEN }}
@@ -104,3 +96,6 @@ jobs:
         with:
           job-config: ${{ matrix.config.job-config }}
           token: ${{ secrets.RHUB_TOKEN }}
+        env:
+          R_BUILD_ARGS: '--no-build-vignettes --no-manual'
+          R_CHECK_ARGS: '--ignore-vignettes'
