@@ -7,6 +7,7 @@
 #' @docType methods
 #' @rdname show-methods
 #' @param object the input \code{CDS} object
+#' @importFrom methods show
 #' 
 #' @export
 
