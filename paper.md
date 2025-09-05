@@ -47,7 +47,7 @@ affiliations:
 
 # Summary
 
-The `creditr` \textbf{R} package is an open-source tool for modeling and valuing credit default swaps (CDS). CDS are financial derivatives that allow investors to hedge or speculate on credit risk by providing protection against the default of a third party. Widely used in financial markets, CDS require complex pricing models to account for variables such as recovery rate, coupon, interest rate, and default probabilities. The `creditr` package  provides users with tools to calculate CDS spreads, upfront payments, and other related quantities using the *ISDA Standard Model*, the industry benchmark for CDS pricing. The package enables users to replicate outputs from proprietary platforms such as Bloomberg and Markit, offering a transparent and scriptable alternative for CDS pricing and analytics. Designed for fixed income researchers and finance practitioners, `creditr` makes quantitative credit modeling accessible within the \textbf{R} programming ecosystem.
+The `creditr` \textbf{R} package is an open-source tool for modeling and valuing credit default swaps (CDS). CDS are financial derivatives that allow investors to hedge or speculate on credit risk by providing protection against the default of a third party [@creditDerivatives]. Widely used in financial markets, CDS require complex pricing models to account for variables such as recovery rate, coupon, interest rate, and default probabilities. The `creditr` package  provides users with tools to calculate CDS spreads, upfront payments, and other related quantities using the *ISDA Standard Model* [@isdaCDS2022], the industry benchmark for CDS pricing. The package enables users to replicate outputs from proprietary platforms such as Bloomberg and Markit [@rates], offering a transparent and scriptable alternative for CDS pricing and analytics. Designed for fixed income researchers and finance practitioners, `creditr` makes quantitative credit modeling accessible within the \textbf{R} programming ecosystem.
 
 
 # Statement of need
@@ -63,17 +63,3 @@ Overall, `creditr` enables users to:
 - Replicate the outputs of the Bloomberg CDS Calculator and Markit CDS pricers and demystify the mechanics behind CDS pricing.
 
 Please note that the **creditr** \textbf{R} package is a wrapper around ISDA's standard CDS model in \textbf{C++}.
-
-# Citations
-
-ISDA CDS Standard Model: https://www.cdsmodel.com/. Last Update in 2022. S&P Global Market Intelligence.
-
-Lenzner, Robert. March 2009. "Who's Afraid Of Credit Default Swaps?" Forbes.
-
-Lanchester, John. June 2009. "Outsmarted." The New Yorker.
-
-Kallianiotis, John. October 2013. "Exchange Rates and International Financial Economics: History, Theories, and Practices." Palgrave Macmillan
-
-Markit. May 2013. "Markit Interest Rate Curve XML Specifications Version 1.15." Markit Journal.
-
-Chacko, George and Sjoman, Anders and Motohashi, Hideto and Dessain, Vincent. 2006. "Credit Derivatives: A Primer on Credit Risk, Modeling, and Instruments." Wharton School Publishing
