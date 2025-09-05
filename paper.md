@@ -63,3 +63,5 @@ Overall, `creditr` enables users to:
 - Replicate the outputs of the Bloomberg CDS Calculator and Markit CDS pricers and demystify the mechanics behind CDS pricing.
 
 Please note that the **creditr** \textbf{R} package is a wrapper around ISDA's standard CDS model in \textbf{C++}.
+
+# References
